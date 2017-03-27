@@ -5,6 +5,7 @@
 const BrowserWindow = require('electron').remote.BrowserWindow
 const { setCurrentUri, getCurrentUri } = require('electron').remote.require('./main.js')
 const path = require('path')
+const contextMenu = require('electron-context-menu')
 
 const webview = document.getElementById('trello')
 const indicator = document.querySelector('.indicator')
@@ -25,6 +26,10 @@ onload = () => {
     // TODO: do something with loader..
     // indicator.innerText = ''
   }
+
+  webview.addEventListener('dom-ready', () => {
+    contextMenu({window: webview})
+  })
 
   webview.addEventListener('did-start-loading', loadstart)
   webview.addEventListener('did-stop-loading', loadstop)

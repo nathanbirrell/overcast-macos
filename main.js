@@ -65,7 +65,7 @@ function createWindow () {
 exports.getCurrentUri = () => {
   return currentUri;
 };
-exports.setCurrentUri = function(uri) {
+exports.setCurrentUri = (uri) => {
   currentUri = uri;
 }
 

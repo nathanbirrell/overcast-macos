@@ -19,6 +19,7 @@
   "productName": "Trello",
   "dependencies": {
     "electron": "~1.6.2",
-    "electron-config": "^0.2.1"
+    "electron-config": "^0.2.1",
+    "electron-context-menu": "^0.8.0"
   }
 }
