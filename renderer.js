@@ -3,7 +3,7 @@
 // All of the Node.js APIs are available in this process.
 
 const BrowserWindow = require('electron').remote.BrowserWindow
-const { setCurrentUri, currentUri } = require('electron').remote.require('./main.js')
+const { setCurrentUri, getCurrentUri } = require('electron').remote.require('./main.js')
 const path = require('path')
 
 const webview = document.getElementById('trello')
@@ -11,17 +11,12 @@ const indicator = document.querySelector('.indicator')
 
 let loadedCurrent = false;
 
-console.log(currentUri)
-
-webview.addEventListener('dom-ready', () => {
-  //
-})
-
 onload = () => {
   const loadstart = () => {
     indicator.innerText = 'loading...'
+    console.log(getCurrentUri())
     if (!loadedCurrent) {
-      webview.loadURL(currentUri)
+      webview.loadURL(getCurrentUri())
     }
     loadedCurrent = true;
   }
@@ -34,8 +29,6 @@ onload = () => {
   webview.addEventListener('did-stop-loading', loadstop)
 
   webview.addEventListener('did-navigate-in-page', function (event) {
-    console.log('webView src = ' + webview.src);
-    console.log('event = ', event);
-    setCurrentUri(webview.src);
+    setCurrentUri(webview.getURL());
   })
 }

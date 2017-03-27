@@ -13,6 +13,7 @@ const url = require('url')
 
 let currentUri = config.get('currentUri')
 
+// Set current URL as default if not set
 if (!currentUri || currentUri === '') {
   currentUri = 'https://www.trello.com/'
   config.set('currentUri', currentUri)
@@ -58,8 +59,11 @@ function createWindow () {
   })
 }
 
-exports.currentUri = currentUri;
+exports.getCurrentUri = () => {
+  return currentUri;
+};
 exports.setCurrentUri = function(uri) {
+  console.log('setCurrentUri= ' + uri);
   currentUri = uri;
 }
 
