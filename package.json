@@ -17,7 +17,7 @@
   "author": "Nathan Birrell",
   "license": "CC0-1.0",
   "productName": "Trello",
-  "devDependencies": {
+  "dependencies": {
     "electron": "~1.6.2",
     "electron-config": "^0.2.1"
   }

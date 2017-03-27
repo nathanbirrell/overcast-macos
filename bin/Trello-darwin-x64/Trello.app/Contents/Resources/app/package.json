@@ -1,0 +1,24 @@
+{
+  "name": "trello-macos",
+  "version": "1.0.1",
+  "description": "A minimal Trello desktop application for macOS.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/nathanbirrell/trello-desktop",
+  "keywords": [
+    "Electron",
+    "trello",
+    "desktop",
+    "macos",
+    "demo"
+  ],
+  "author": "Nathan Birrell",
+  "license": "CC0-1.0",
+  "productName": "Trello",
+  "dependencies": {
+    "electron": "~1.6.2",
+    "electron-config": "^0.2.1"
+  }
+}
