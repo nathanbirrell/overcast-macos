@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html style="width: 100%; height: 100%;">
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Trello</title>
   </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+  <body style="width: 100%; height: 100%; margin: 0;">
+    <webview id="trello" src="https://www.trello.com/" autosize style="width: 100%; height: 100%;"></webview>
   </body>
 
   <script>
