@@ -11,6 +11,13 @@ const config = new Config()
 const path = require('path')
 const url = require('url')
 
+let currentUri = config.get('currentUri')
+
+if (!currentUri || currentUri === '') {
+  currentUri = 'https://www.trello.com/'
+  config.set('currentUri', currentUri)
+}
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
@@ -22,7 +29,6 @@ function createWindow () {
     transparent: false,
     frame: true
   }
-
   Object.assign(options, config.get('winBounds'))
 
   // Create the browser window.
@@ -36,11 +42,12 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('close', function () {
     config.set('winBounds', mainWindow.getBounds())
+    config.set('currentUri', currentUri)
   })
 
   mainWindow.on('closed', function () {
@@ -49,6 +56,11 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+}
+
+exports.currentUri = currentUri;
+exports.setCurrentUri = function(uri) {
+  currentUri = uri;
 }
 
 // This method will be called when Electron has finished
