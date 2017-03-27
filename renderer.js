@@ -13,8 +13,8 @@ let loadedCurrent = false;
 
 onload = () => {
   const loadstart = () => {
-    indicator.innerText = 'loading...'
-    console.log(getCurrentUri())
+    // TODO: do something with loader..
+    // indicator.innerText = 'loading...'
     if (!loadedCurrent) {
       webview.loadURL(getCurrentUri())
     }
@@ -22,7 +22,8 @@ onload = () => {
   }
 
   const loadstop = () => {
-    indicator.innerText = ''
+    // TODO: do something with loader..
+    // indicator.innerText = ''
   }
 
   webview.addEventListener('did-start-loading', loadstart)

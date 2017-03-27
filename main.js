@@ -11,11 +11,13 @@ const config = new Config()
 const path = require('path')
 const url = require('url')
 
+const defaultUrl = 'https://www.trello.com/'
+
 let currentUri = config.get('currentUri')
 
 // Set current URL as default if not set
 if (!currentUri || currentUri === '') {
-  currentUri = 'https://www.trello.com/'
+  currentUri = defaultUrl;
   config.set('currentUri', currentUri)
 }
 
@@ -30,6 +32,7 @@ function createWindow () {
     transparent: false,
     frame: true
   }
+
   Object.assign(options, config.get('winBounds'))
 
   // Create the browser window.
@@ -43,7 +46,7 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('close', function () {
@@ -63,7 +66,6 @@ exports.getCurrentUri = () => {
   return currentUri;
 };
 exports.setCurrentUri = function(uri) {
-  console.log('setCurrentUri= ' + uri);
   currentUri = uri;
 }
 
