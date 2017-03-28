@@ -1,0 +1,25 @@
+html,
+body {
+  width: 100%; height: 100%; margin: 0;
+  background: #0079BF;
+  display: flex;
+  align-items: center;
+}
+.loader {
+  background-image: url("loader.gif");
+  background-size: 18px 18px;
+  display: none;
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  left: 50%;
+}
+.loader.is-loading {
+  display: block;
+  margin: 0 auto;
+}
+webview {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}

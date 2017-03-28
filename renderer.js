@@ -9,12 +9,13 @@ const contextMenu = require('electron-context-menu')
 
 const webview = document.getElementById('trello')
 const loader = document.querySelector('.loader')
+const isLoadingClass = 'is-loading'
 
 let loadedCurrent = false;
 
 onload = () => {
   const loadstart = () => {
-    loader.classList.add('is-loading')
+    loader.classList.add(isLoadingClass)
 
     if (!loadedCurrent) {
       webview.loadURL(getCurrentUri())
@@ -24,7 +25,7 @@ onload = () => {
   }
 
   const loadstop = () => {
-    loader.classList.remove('is-loading')
+    // loader.classList.remove(isLoadingClass)
   }
 
   webview.addEventListener('dom-ready', () => {
