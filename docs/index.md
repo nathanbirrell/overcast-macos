@@ -1,8 +1,4 @@
----
-layout: default
----
-
-![Screenshot of Trello for Mac in action](/screenshot.png)
+![Screenshot of Trello for Mac in action]({{site.url}}/screenshot.png)
 
 ## Why?
 
