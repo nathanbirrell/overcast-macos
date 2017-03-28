@@ -8,23 +8,23 @@ const path = require('path')
 const contextMenu = require('electron-context-menu')
 
 const webview = document.getElementById('trello')
-const indicator = document.querySelector('.indicator')
+const loader = document.querySelector('.loader')
 
 let loadedCurrent = false;
 
 onload = () => {
   const loadstart = () => {
-    // TODO: do something with loader..
-    // indicator.innerText = 'loading...'
+    loader.classList.add('is-loading')
+
     if (!loadedCurrent) {
       webview.loadURL(getCurrentUri())
     }
+
     loadedCurrent = true;
   }
 
   const loadstop = () => {
-    // TODO: do something with loader..
-    // indicator.innerText = ''
+    loader.classList.remove('is-loading')
   }
 
   webview.addEventListener('dom-ready', () => {

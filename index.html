@@ -3,10 +3,36 @@
   <head>
     <meta charset="UTF-8">
     <title>Trello</title>
+
+    <style>
+      body {
+        width: 100%; height: 100%; margin: 0;
+        background: #0079BF;
+        display: flex;
+        align-items: center;
+      }
+      .loader {
+        background-image: url("loader.gif");
+        background-size: 18px 18px;
+        display: none;
+        height: 18px;
+        width: 18px;
+        position: absolute;
+        left: 50%;
+      }
+      .loader.is-loading {
+        display: block;
+        margin: 0 auto;
+      }
+      webview {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </head>
-  <body style="width: 100%; height: 100%; margin: 0;">
-    <span class="indicator"></span>
-    <webview id="trello" src="https://trello.com" autosize style="width: 100%; height: 100%;"></webview>
+  <body>
+    <span class="loader"></span>
+    <webview id="trello" src="https://trello.com" autosize></webview>
   </body>
 
   <script>
