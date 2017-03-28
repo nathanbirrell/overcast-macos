@@ -1,6 +1,6 @@
 {
   "name": "trello-macos",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A minimal Trello desktop application for macOS.",
   "main": "main.js",
   "scripts": {
