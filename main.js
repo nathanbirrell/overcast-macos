@@ -30,6 +30,7 @@ function createWindow () {
     width: 800,
     height: 600,
     transparent: false,
+    // titleBarStyle: 'hidden-inset',
     frame: true
   }
 
@@ -46,7 +47,7 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('close', function () {
