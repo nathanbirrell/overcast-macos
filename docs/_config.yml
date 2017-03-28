@@ -1,1 +1,13 @@
 theme: jekyll-theme-minimal
+
+title: Trello for Mac
+description: Use Trello as a native macOS application.
+
+google_analytics: UA-41066869-1
+show_downloads: false
+
+download: https://github.com/nathanbirrell/trello-macos/releases/download/v1.0.2/Trello.zip
+
+github:
+  user: nathanbirrell
+  repo: trello-macos
