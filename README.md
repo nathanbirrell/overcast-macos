@@ -1,6 +1,6 @@
 Use Trello as a native macOS application.
 
-![Screenshot of Trello for Mac in action]({{site.url}}/screenshot.png)
+![Screenshot of Trello for Mac in action](https://trelloformac.nathanbirrell.me/screenshot.png)
 
 ## Why?
 
