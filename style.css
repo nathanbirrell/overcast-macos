@@ -12,7 +12,7 @@ body {
   height: 48px;
   width: 48px;
   position: absolute;
-  left: 50%;
+  left: 47%;
   margin: 0 auto;
 }
 .loader.is-loading {
