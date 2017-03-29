@@ -1,5 +1,5 @@
 {
-  "name": "trello-macos",
+  "name": "overcast-macos",
   "version": "0.0.1",
   "description": "A minimal Overcast desktop application for macOS.",
   "main": "main.js",

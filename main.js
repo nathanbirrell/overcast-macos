@@ -11,7 +11,7 @@ const config = new Config()
 const path = require('path')
 const url = require('url')
 
-const defaultUrl = 'https://www.trello.com/'
+const defaultUrl = 'https://overcast.fm/'
 
 let currentUri = config.get('currentUri')
 
