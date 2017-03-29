@@ -30,8 +30,8 @@ function createWindow () {
     width: 520,
     height: 600,
     transparent: false,
-    // titleBarStyle: 'hidden-inset',
-    frame: true
+    titleBarStyle: 'hidden-inset',
+    frame: false
   }
 
   Object.assign(options, config.get('winBounds'))
