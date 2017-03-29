@@ -25,7 +25,7 @@ onload = () => {
   }
 
   const loadstop = () => {
-    // loader.classList.remove(isLoadingClass)
+    loader.classList.remove(isLoadingClass)
   }
 
   webview.addEventListener('dom-ready', () => {
