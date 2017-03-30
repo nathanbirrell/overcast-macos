@@ -79,6 +79,34 @@ let template = [{
         focusedWindow.toggleDevTools()
       }
     }
+  }, {
+    label: 'Go Back',
+    accelerator: (function () {
+      if (process.platform === 'darwin') {
+        return 'Command+['
+      } else {
+        return 'Ctrl+['
+      }
+    })(),
+    click: function (item, focusedWindow) {
+      if (focusedWindow) {
+        focusedWindow.webContents.send('navigate', 'back')
+      }
+    }
+  }, {
+    label: 'Go Forward',
+    accelerator: (function () {
+      if (process.platform === 'darwin') {
+        return 'Command+]'
+      } else {
+        return 'Ctrl+]'
+      }
+    })(),
+    click: function (item, focusedWindow) {
+      if (focusedWindow) {
+        focusedWindow.webContents.send('navigate', 'forward')
+      }
+    }
   }]
 }, {
   label: 'Window',

@@ -6,6 +6,9 @@ const app = electron.app
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
 
+// Allows communication between the main process and the render process
+const ipcMain = electron.ipcMain
+
 const config = new Config()
 
 const path = require('path')
@@ -47,7 +50,7 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('close', function () {
