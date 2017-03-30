@@ -1,0 +1,13 @@
+theme: jekyll-theme-minimal
+
+title: Overcast for Mac
+description: Use Overcast as a native macOS application.
+
+google_analytics: UA-41066869-1
+show_downloads: false
+
+download: https://github.com/nathanbirrell/overcast-macos/releases/latest
+
+github:
+  user: nathanbirrell
+  repo: overcast-macos

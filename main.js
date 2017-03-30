@@ -11,7 +11,7 @@ const config = new Config()
 const path = require('path')
 const url = require('url')
 
-const defaultUrl = 'https://www.trello.com/'
+const defaultUrl = 'https://overcast.fm/podcasts'
 
 let currentUri = config.get('currentUri')
 
@@ -27,11 +27,11 @@ let mainWindow
 
 function createWindow () {
   let options = {
-    width: 800,
+    width: 520,
     height: 600,
     transparent: false,
-    // titleBarStyle: 'hidden-inset',
-    frame: true
+    titleBarStyle: 'hidden-inset',
+    frame: false
   }
 
   Object.assign(options, config.get('winBounds'))

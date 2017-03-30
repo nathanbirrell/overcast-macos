@@ -7,7 +7,7 @@ const { setCurrentUri, getCurrentUri } = require('electron').remote.require('./m
 const path = require('path')
 const contextMenu = require('electron-context-menu')
 
-const webview = document.getElementById('trello')
+const webview = document.getElementById('webview')
 const loader = document.querySelector('.loader')
 const isLoadingClass = 'is-loading'
 
@@ -25,7 +25,7 @@ onload = () => {
   }
 
   const loadstop = () => {
-    // loader.classList.remove(isLoadingClass)
+    loader.classList.remove(isLoadingClass)
   }
 
   webview.addEventListener('dom-ready', () => {

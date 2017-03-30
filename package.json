@@ -1,22 +1,21 @@
 {
-  "name": "trello-macos",
-  "version": "1.0.2",
-  "description": "A minimal Trello desktop application for macOS.",
+  "name": "overcast-macos",
+  "version": "0.1.0",
+  "description": "A minimal Overcast desktop application for macOS.",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/nathanbirrell/trello-desktop",
+  "repository": "https://github.com/nathanbirrell/overcast-macos",
   "keywords": [
     "Electron",
-    "trello",
+    "overcast",
     "desktop",
-    "macos",
-    "demo"
+    "macos"
   ],
   "author": "Nathan Birrell",
   "license": "CC0-1.0",
-  "productName": "Trello",
+  "productName": "Overcast",
   "dependencies": {
     "electron": "~1.6.2",
     "electron-config": "^0.2.1",

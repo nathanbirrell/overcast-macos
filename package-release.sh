@@ -1,2 +1,2 @@
 #!/bin/bash
-electron-packager . Trello --icon=icon --overwrite --out=bin
+electron-packager . Overcast --icon=icon --overwrite --out=bin

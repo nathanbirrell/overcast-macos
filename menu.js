@@ -108,7 +108,7 @@ let template = [{
   submenu: [{
     label: 'Learn More',
     click: function () {
-      electron.shell.openExternal('http://trello-desktop.nathanbirrell.me')
+      electron.shell.openExternal('http://overcastformac.nathanbirrell.me')
     }
   }]
 }]
