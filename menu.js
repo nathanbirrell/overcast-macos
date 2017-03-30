@@ -3,6 +3,10 @@ const BrowserWindow = electron.BrowserWindow
 const Menu = electron.Menu
 const app = electron.app
 
+// TODO: try refactoring to `const config = new require('electron-config').Config()`
+const Config = require('electron-config')
+const config = new Config()
+
 let template = [{
   label: 'Edit',
   submenu: [{
@@ -135,6 +139,19 @@ let template = [{
         focusedWindow.webContents.send('playback', 'previous')
       }
     }
+  }, {
+    type: 'separator'
+  }, {
+    label: 'Toggle Apple media keys (play/pause/next/previous)',
+    type: 'checkbox',
+    checked: config.get('mediaKeysOn'),
+    click: (item, focusedWindow) => {
+      // TODO: write me
+      let currentlyOn = config.get('mediaKeysOn')
+      // get current config
+      // if on, turn off
+      // if off, turn on
+    }
   }]
 }, {
   label: 'Window',
@@ -255,7 +272,7 @@ if (process.platform === 'darwin') {
   })
 
   // Window menu.
-  template[3].submenu.push({
+  template[4].submenu.push({
     type: 'separator'
   }, {
     label: 'Bring All to Front',

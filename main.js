@@ -18,10 +18,16 @@ const defaultUrl = 'https://overcast.fm/podcasts'
 
 let currentUri = config.get('currentUri')
 
+// Set some config if it isn't set already
+
 // Set current URL as default if not set
 if (!currentUri || currentUri === '') {
   currentUri = defaultUrl;
   config.set('currentUri', currentUri)
+}
+
+if (config.get('mediaKeysOn') === undefined) {
+  config.set('mediaKeysOn', true)
 }
 
 // Keep a global reference of the window object, if you don't, the window will
