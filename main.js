@@ -1,6 +1,8 @@
 const electron = require('electron')
 const Config = require('electron-config')
 
+const globalShortcuts = require('./global_shortcuts.js')
+
 // Module to control application life.
 const app = electron.app
 // Module to create native browser window.
@@ -71,12 +73,13 @@ function createWindow () {
     mainWindow = null
   })
 
-  require('./global_shortcuts.js').globalShortcuts(mainWindow)
+  globalShortcuts.registerGlobalShortcuts(mainWindow)
 }
 
 exports.getCurrentUri = () => {
   return currentUri;
-};
+}
+
 exports.setCurrentUri = (uri) => {
   currentUri = uri;
 }

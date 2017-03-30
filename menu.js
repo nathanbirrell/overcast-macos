@@ -3,9 +3,10 @@ const BrowserWindow = electron.BrowserWindow
 const Menu = electron.Menu
 const app = electron.app
 
-// TODO: try refactoring to `const config = new require('electron-config').Config()`
 const Config = require('electron-config')
 const config = new Config()
+
+const globalShortcuts = require('./global_shortcuts.js')
 
 let template = [{
   label: 'Edit',
@@ -142,15 +143,11 @@ let template = [{
   }, {
     type: 'separator'
   }, {
-    label: 'Toggle Apple media keys (play/pause/next/previous)',
+    label: 'Control Overcast with media keys',
     type: 'checkbox',
     checked: config.get('mediaKeysOn'),
     click: (item, focusedWindow) => {
-      // TODO: write me
-      let currentlyOn = config.get('mediaKeysOn')
-      // get current config
-      // if on, turn off
-      // if off, turn on
+      globalShortcuts.toggleMediaKeySettings(focusedWindow);
     }
   }]
 }, {
