@@ -57,16 +57,13 @@ ipcRenderer.on('navigate', function(event, direction){
 ipcRenderer.on('playback', function(event, action){
   switch (action) {
     case 'playpause':
-      console.log('playpause')
-      // webview.getWebContents().goBack()
+      webview.executeJavaScript("document.getElementById('playpausebutton').click()");
       break;
     case 'next':
-      console.log('next')
-      // webview.getWebContents().goForward()
+      webview.executeJavaScript("document.getElementById('seekforwardbutton').click()");
       break;
     case 'previous':
-      console.log('previous')
-      // webview.getWebContents().goForward()
+      webview.executeJavaScript("document.getElementById('seekbackbutton').click()");
       break;
     default:
       break;
