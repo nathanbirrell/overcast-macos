@@ -109,6 +109,34 @@ let template = [{
     }
   }]
 }, {
+  label: 'Playback',
+  role: 'window',
+  submenu: [{
+    label: 'Play/Pause',
+    accelerator: 'MediaPlayPause',
+    click: function (item, focusedWindow) {
+      if (focusedWindow) {
+        focusedWindow.webContents.send('playback', 'playpause')
+      }
+    }
+  }, {
+    label: 'Next',
+    accelerator: 'MediaNextTrack',
+    click: function (item, focusedWindow) {
+      if (focusedWindow) {
+        focusedWindow.webContents.send('playback', 'next')
+      }
+    }
+  }, {
+    label: 'Previous',
+    accelerator: 'MediaPreviousTrack',
+    click: function (item, focusedWindow) {
+      if (focusedWindow) {
+        focusedWindow.webContents.send('playback', 'previous')
+      }
+    }
+  }]
+}, {
   label: 'Window',
   role: 'window',
   submenu: [{

@@ -44,12 +44,29 @@ onload = () => {
 ipcRenderer.on('navigate', function(event, direction){
   switch (direction) {
     case 'back':
-      console.log('back')
       webview.getWebContents().goBack()
       break;
     case 'forward':
-      console.log('fwd')
       webview.getWebContents().goForward()
+      break;
+    default:
+      break;
+  }
+});
+
+ipcRenderer.on('playback', function(event, action){
+  switch (action) {
+    case 'playpause':
+      console.log('playpause')
+      // webview.getWebContents().goBack()
+      break;
+    case 'next':
+      console.log('next')
+      // webview.getWebContents().goForward()
+      break;
+    case 'previous':
+      console.log('previous')
+      // webview.getWebContents().goForward()
       break;
     default:
       break;
