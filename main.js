@@ -38,8 +38,8 @@ let mainWindow
 
 function createWindow () {
   let options = {
-    width: 520,
-    height: 600,
+    width: 430,
+    height: 660,
     transparent: false,
     titleBarStyle: 'hidden-inset',
     frame: false
