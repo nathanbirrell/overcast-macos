@@ -1,10 +1,15 @@
 const electron = require('electron')
 const Config = require('electron-config')
 
+const globalShortcuts = require('./global_shortcuts.js')
+
 // Module to control application life.
 const app = electron.app
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
+
+// Allows communication between the main process and the render process
+const ipcMain = electron.ipcMain
 
 const config = new Config()
 
@@ -15,10 +20,16 @@ const defaultUrl = 'https://overcast.fm/podcasts'
 
 let currentUri = config.get('currentUri')
 
+// Set some config if it isn't set already
+
 // Set current URL as default if not set
 if (!currentUri || currentUri === '') {
   currentUri = defaultUrl;
   config.set('currentUri', currentUri)
+}
+
+if (config.get('mediaKeysOn') === undefined) {
+  config.set('mediaKeysOn', true)
 }
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -27,8 +38,8 @@ let mainWindow
 
 function createWindow () {
   let options = {
-    width: 520,
-    height: 600,
+    width: 430,
+    height: 660,
     transparent: false,
     titleBarStyle: 'hidden-inset',
     frame: false
@@ -47,7 +58,7 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('close', function () {
@@ -61,11 +72,14 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+
+  globalShortcuts.registerGlobalShortcuts(mainWindow)
 }
 
 exports.getCurrentUri = () => {
   return currentUri;
-};
+}
+
 exports.setCurrentUri = (uri) => {
   currentUri = uri;
 }
@@ -73,7 +87,9 @@ exports.setCurrentUri = (uri) => {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on('ready', createWindow)
+app.on('ready', () => {
+  createWindow()
+})
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {

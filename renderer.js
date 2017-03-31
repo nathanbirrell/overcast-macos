@@ -2,10 +2,10 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 
-const BrowserWindow = require('electron').remote.BrowserWindow
 const { setCurrentUri, getCurrentUri } = require('electron').remote.require('./main.js')
 const path = require('path')
 const contextMenu = require('electron-context-menu')
+var { ipcRenderer } = require('electron');
 
 const webview = document.getElementById('webview')
 const loader = document.querySelector('.loader')
@@ -39,3 +39,33 @@ onload = () => {
     setCurrentUri(webview.getURL());
   })
 }
+
+// Listeners (for events from the main process)
+ipcRenderer.on('navigate', function(event, direction){
+  switch (direction) {
+    case 'back':
+      webview.getWebContents().goBack()
+      break;
+    case 'forward':
+      webview.getWebContents().goForward()
+      break;
+    default:
+      break;
+  }
+});
+
+ipcRenderer.on('playback', function(event, action){
+  switch (action) {
+    case 'playpause':
+      webview.executeJavaScript("document.getElementById('playpausebutton').click()");
+      break;
+    case 'next':
+      webview.executeJavaScript("document.getElementById('seekforwardbutton').click()");
+      break;
+    case 'previous':
+      webview.executeJavaScript("document.getElementById('seekbackbutton').click()");
+      break;
+    default:
+      break;
+  }
+});

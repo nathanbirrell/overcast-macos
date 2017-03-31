@@ -3,6 +3,11 @@ const BrowserWindow = electron.BrowserWindow
 const Menu = electron.Menu
 const app = electron.app
 
+const Config = require('electron-config')
+const config = new Config()
+
+const globalShortcuts = require('./global_shortcuts.js')
+
 let template = [{
   label: 'Edit',
   submenu: [{
@@ -78,6 +83,71 @@ let template = [{
       if (focusedWindow) {
         focusedWindow.toggleDevTools()
       }
+    }
+  }, {
+    label: 'Go Back',
+    accelerator: (function () {
+      if (process.platform === 'darwin') {
+        return 'Command+['
+      } else {
+        return 'Ctrl+['
+      }
+    })(),
+    click: function (item, focusedWindow) {
+      if (focusedWindow) {
+        focusedWindow.webContents.send('navigate', 'back')
+      }
+    }
+  }, {
+    label: 'Go Forward',
+    accelerator: (function () {
+      if (process.platform === 'darwin') {
+        return 'Command+]'
+      } else {
+        return 'Ctrl+]'
+      }
+    })(),
+    click: function (item, focusedWindow) {
+      if (focusedWindow) {
+        focusedWindow.webContents.send('navigate', 'forward')
+      }
+    }
+  }]
+}, {
+  label: 'Playback',
+  role: 'window',
+  submenu: [{
+    label: 'Play/Pause',
+    accelerator: 'MediaPlayPause',
+    click: function (item, focusedWindow) {
+      if (focusedWindow) {
+        focusedWindow.webContents.send('playback', 'playpause')
+      }
+    }
+  }, {
+    label: 'Skip forward',
+    accelerator: 'MediaNextTrack',
+    click: function (item, focusedWindow) {
+      if (focusedWindow) {
+        focusedWindow.webContents.send('playback', 'next')
+      }
+    }
+  }, {
+    label: 'Skip back',
+    accelerator: 'MediaPreviousTrack',
+    click: function (item, focusedWindow) {
+      if (focusedWindow) {
+        focusedWindow.webContents.send('playback', 'previous')
+      }
+    }
+  }, {
+    type: 'separator'
+  }, {
+    label: 'Control Overcast with media keys',
+    type: 'checkbox',
+    checked: config.get('mediaKeysOn'),
+    click: (item, focusedWindow) => {
+      globalShortcuts.toggleMediaKeySettings(focusedWindow);
     }
   }]
 }, {
@@ -199,7 +269,7 @@ if (process.platform === 'darwin') {
   })
 
   // Window menu.
-  template[3].submenu.push({
+  template[4].submenu.push({
     type: 'separator'
   }, {
     label: 'Bring All to Front',

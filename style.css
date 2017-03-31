@@ -5,6 +5,13 @@ body {
   display: flex;
   align-items: center;
 }
+
+@media (max-width: 420px) {
+  body {
+    padding-top: 62px;
+  }
+}
+
 .loader {
   background-image: url("loader.svg");
   background-size: contain;
@@ -30,8 +37,12 @@ body {
     transform: scale(1);
   }
 }
+
 webview {
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+.title-bar {
 }
