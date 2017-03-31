@@ -125,7 +125,7 @@ let template = [{
       }
     }
   }, {
-    label: 'Next',
+    label: 'Skip forward',
     accelerator: 'MediaNextTrack',
     click: function (item, focusedWindow) {
       if (focusedWindow) {
@@ -133,7 +133,7 @@ let template = [{
       }
     }
   }, {
-    label: 'Previous',
+    label: 'Skip back',
     accelerator: 'MediaPreviousTrack',
     click: function (item, focusedWindow) {
       if (focusedWindow) {
