@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
+    <title>{{ site.title | default: site.github.repository_name }}</title>
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <meta name="viewport" content="width=device-width">
@@ -11,7 +11,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link id="favicon" rel="icon" type="image/png" sizes="64x64" href="data:image/png;base64,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">
+    <link rel="icon" href="//d2uzvmey2c90kn.cloudfront.net/favicon.ico">
   </head>
   <body>
     <div class="wrapper">

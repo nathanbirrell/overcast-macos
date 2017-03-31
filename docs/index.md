@@ -1,4 +1,4 @@
-![Screenshot of Overcast for Mac in action]({{site.url}}/screenshot.jpg)
+![Screenshot of Overcast for Mac in action](/screenshot.jpg)
 
 ## Why?
 
