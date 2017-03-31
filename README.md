@@ -1,16 +1,15 @@
 Use Overcast as a native macOS application.
 
-![Screenshot of Overcast for Mac in action](https://overcastformac.nathanbirrell.me/screenshot.png)
+![Screenshot of Overcast for Mac in action](https://overcastformac.nathanbirrell.me/screenshot.jpg)
 
 ## Why?
 
-* Alt-tab your way to Overcast
+* Use your keyboard's media keys (play/pause/skip/prev)
+* Alt-tab your way to Overcast, instead of using a browser tab
 * Remembers your state, so you can pick up where you left off
-* Includes expected keyboard shortcuts
 
 ## Planned Features
 
-* Integrate Apple media keys (play/pause/next/prev)
 * Save podcasts offline (?)
 
 ## Download

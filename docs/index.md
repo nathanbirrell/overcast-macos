@@ -1,10 +1,10 @@
-![Screenshot of Overcast for Mac in action]({{site.url}}/screenshot.png)
+![Screenshot of Overcast for Mac in action]({{site.url}}/screenshot.jpg)
 
 ## Why?
 
-* Alt-tab your way to Overcast
+* Use your keyboard's media keys (play/pause/skip/prev)
+* Alt-tab your way to Overcast, instead of using a browser tab
 * Remembers your state, so you can pick up where you left off
-* Includes expected keyboard shortcuts
 
 ## Ideas?
 

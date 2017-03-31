@@ -20,11 +20,11 @@
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
         {% if site.download %}
-          <h3><a href="{{ site.download }}">Download Overcast for Mac</a> <small>(v1.0.2)</small></h3>
+          <h3><a href="{{ site.download }}">Download Overcast for Mac</a> <small>({{site.version}})</small></h3>
         {% endif %}
 
         {% if site.github.is_project_page %}
-          <p class="view"><a href="{{ site.github.repository_url }}">View on GitHub <small>{{ github_name }}</small></a></p>
+          <p class="view"><a href="{{ site.github.repository_url }}">View on GitHub <small>{{ site.github_name }}</small></a></p>
           <iframe src="https://ghbtns.com/github-btn.html?user={{site.github.user}}&repo={{site.github.repo}}&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
         {% endif %}
 
