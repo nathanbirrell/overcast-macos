@@ -1,6 +1,6 @@
 {
   "name": "overcast-macos",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A minimal Overcast desktop application for macOS.",
   "main": "main.js",
   "scripts": {
