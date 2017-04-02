@@ -25,6 +25,6 @@ or simply fork and pull request :)
 
 ## Disclaimer
 
-This application is in no way affiliated with [Overcast](www.overcast.fm), I use this app a lot on my iPhone and wish I could use it on my Mac too, so I built this. [Get Overcast for iOS here](https://itunes.apple.com/app/overcast-podcast-player/id888422857).
+This application is in no way affiliated with [Overcast](https://overcast.fm), I use this app a lot on my iPhone and wish I could use it on my Mac too, so I built this. [Get Overcast for iOS here](https://itunes.apple.com/app/overcast-podcast-player/id888422857).
 
 *Please note: as this is a free application, I have not paid for the $150 Apple Developer Program to sign it. This means you will get an "Unidentified Developer" warning from macOS's Gatekeeper. [Go here to open the app regardless](https://support.apple.com/kb/PH25088?locale=en_US)*
