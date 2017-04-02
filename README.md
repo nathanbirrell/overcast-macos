@@ -10,6 +10,7 @@ Use Overcast as a native macOS application.
 
 ## Planned Features
 
+* Option to show in the macOS menu bar
 * Save podcasts offline (?)
 
 ## Download
