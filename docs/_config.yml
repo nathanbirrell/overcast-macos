@@ -1,7 +1,7 @@
 theme: jekyll-theme-minimal
 
-title: Overcast for Mac
-description: Use Overcast as a native macOS application.
+title: Overcast for Mac (unofficial)
+description: An unofficial macOS desktop application for Overcast.
 
 google_analytics: UA-41066869-1
 show_downloads: false
