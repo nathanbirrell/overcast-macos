@@ -45,4 +45,13 @@ webview {
 }
 
 .title-bar {
+  -webkit-app-region: drag;
+  position: absolute;
+  display: block;
+  height: 34px;
+  width: 100%;
+  top: 0;
+  z-index: 999999;
+  background: #fff;
+  opacity: 0.8;
 }
