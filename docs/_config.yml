@@ -6,8 +6,8 @@ description: Use Overcast as a native macOS application.
 google_analytics: UA-41066869-1
 show_downloads: false
 
-download: https://github.com/nathanbirrell/overcast-macos/releases/download/v0.2.1/Overcast.app.zip
-version: v0.2.1
+download: https://github.com/nathanbirrell/overcast-macos/releases/latest
+version: v0.2.2
 
 github:
   user: nathanbirrell

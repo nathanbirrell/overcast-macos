@@ -4,7 +4,7 @@
 
 * Use your keyboard's media keys (play/pause/skip/prev)
 * Alt-tab your way to Overcast, instead of using a browser tab
-* Remembers your state, so you can pick up where you left off
+* Remembers your state, so you can pick up on the shows or eps that you left off
 
 ## Download
 
