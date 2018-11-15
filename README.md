@@ -12,7 +12,6 @@ Use Overcast as a native macOS application.
 
 * Option to show in the macOS menu bar
 
-
 ## Download
 
 [Download Latest](https://github.com/nathanbirrell/overcast-macos/releases/latest)
@@ -22,6 +21,14 @@ Use Overcast as a native macOS application.
 [Create an issue](https://github.com/nathanbirrell/overcast-macos/issues)
 
 or simply fork and pull request :)
+
+## Develop
+
+`npm run start`
+
+Build:
+
+`./package-release.sh`
 
 ## Disclaimer
 
