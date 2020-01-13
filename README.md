@@ -1,4 +1,4 @@
-## Please note I'm not currently maintaining this project at the moment, anyone is welcome to take it over, OR use [this great alternative](https://github.com/insidegui/PodcastMenu)
+## Please note I'm not currently maintaining this project at the moment. Try [this great alternative](https://github.com/insidegui/PodcastMenu)
 
 
 Use Overcast as a native macOS application.
