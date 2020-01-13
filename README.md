@@ -1,3 +1,6 @@
+## Please note I'm not currently maintaining this project at the moment, anyone is welcome to take it over, OR use [this great alternative](https://github.com/insidegui/PodcastMenu)
+
+
 Use Overcast as a native macOS application.
 
 ![Screenshot of Overcast for Mac in action](https://overcastformac.nathanbirrell.me/screenshot.jpg)
